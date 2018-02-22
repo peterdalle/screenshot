@@ -17,6 +17,12 @@ pip install python-slugify
 
 3. Make sure Python can find the web driver by modifying your PATH environment variable. This is described in the [Selenium installation guide](http://selenium-python.readthedocs.io/installation.html).
 
+4. Download Screenshot:
+
+```bash
+$ git clone git@github.com:peterdalle/screenshot.git
+```
+
 ## Usage
 
 Provide a URL or domain name as argument:
