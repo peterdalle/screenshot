@@ -49,7 +49,7 @@ $ python screenshot.py urls.txt
 
 ## Settings
 
-Change the behavior of the program in the `settings` class. Each setting is documented there.
+Change the behavior of the program in the [`settings` class](/screenshot.py#L10). Each setting is documented there.
 
 The most important setting is probably `headless = True` which means that a browser is opened in the background without opening a visible browser window.
 
