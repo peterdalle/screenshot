@@ -58,3 +58,21 @@ The most important setting is probably `headless = True` which means that a brow
 ### Memory hog
 
 Selenium seem to have a problem closing the web driver, resulting in lots of web drivers left running and clogging down memory resources. You may need to kill the running processes now and then, especially if you screenshot with crontab.
+
+## Alternative approach
+
+Another approach is to use the following bash command that creates a virtual x server environment:
+
+```bash
+xvfb-run --auto-servernum --server-num=1 --server-args="-screen 0 1024x8048x16" cutycapt --url="http://example.net/" --out="example.net.jpg"
+```
+
+The file `bash_screenshot.py` is just a wrapper around this command that takes a `url` as input parameter and outputs a file with a time stamp and url.
+
+Use it as follows:
+
+```bash
+$ python bash_screenshot.py http://example.net/
+```
+
+This will produce a file like `2018-01-01-18-40_http-www-example-net.jpg`. Make sure to use `.jpg` as file extension since `.png` will create much larger files (JPG has a lossy compression).
